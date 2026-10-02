@@ -1,0 +1,153 @@
+* {
+  padding: 0em;
+  margin: 0em;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 250, 235);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+}
+
+nav {
+  width: 100%;
+  background-color: rgb(255, 240, 195);
+  padding: 2em;
+  margin-bottom: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  border-bottom: 0.2em solid rgb(255, 175, 100);
+
+  .nav-item {
+    display: inline-block;
+    border: 0.2em solid rgb(255, 175, 100);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgb(255, 230, 160);
+
+    a {
+      text-decoration: none;
+      color: rgb(76, 54, 31);
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(255, 240, 195);
+  padding: 1em;
+  margin-top: 1em;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  color: rgb(76, 54, 31);
+  border-top: 0.2em solid rgb(255, 175, 100);
+
+  .footer-link {
+    display: inline-block;
+    border: 0.2em solid rgb(255, 175, 100);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgb(255, 230, 160);
+    color: rgb(76, 54, 31);
+  }
+
+  a {
+      text-decoration: none;
+      color: rgb(76, 54, 31);
+    }
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 7 / 5;
+  border: 0.1em solid rgb(255, 175, 100);
+  border-radius: 1em;
+}
+
+.grid-container {
+  display: grid;
+  gap: 0.85em;
+  padding: 1.25em;
+  background-color: rgb(255, 240, 195);
+  border: 0.1em solid rgb(255, 175, 100);
+  border-radius: 1em;
+  box-shadow: 0 5px 0 rgb(255, 230, 160);
+}
+
+.grid-container h1 {
+  color: rgb(76, 54, 31);
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+.location {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  color: rgb(76, 54, 31);
+}
+
+@media only screen and (max-width: 45em) {
+  nav {
+    padding: 1em;
+  }
+
+  nav .nav-item {
+    display: block;
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  main {
+    width: 95%;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em 0.75em 2em;
+  }
+
+  footer {
+    padding: 1em 0.75em;
+    text-align: center;
+  }
+
+  footer .footer-link {
+    display: block;
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  .image {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 45em) and (max-width: 60em) {
+  nav {
+    padding: 1.25em;
+  }
+
+  main {
+    width: 92%;
+    gap: 1.25em;
+  }
+
+  nav .nav-item {
+    margin: 0.5em;
+  }
+
+  footer .footer-link {
+    margin: 0.5em;
+  }
+}
